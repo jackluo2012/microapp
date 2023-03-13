@@ -16,6 +16,8 @@
 package auth
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/url"
 
 	"github.com/jackluo2012/microapp"
@@ -34,8 +36,32 @@ See: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/log-in/co
 
 GET https://developer.toutiao.com/api/apps/jscode2session
 */
-func Code2Session(ctx *microapp.MicroApp, params url.Values) (resp []byte, err error) {
+// RespCode2Session struct
+type RespCode2Session struct {
+	microapp.Error
+
+	Openid          string `json:"openid"`           // 用户在当前小程序的 ID，如果请求时有 code 参数才会返回
+	SessionKey      string `json:"session_key"`      // 会话密钥，如果请求时有 code 参数才会返回
+	AnonymousOpenid string `json:"anonymous_openid"` // 匿名用户在当前小程序的 ID，如果请求时有 anonymous_code 参数才会返回
+}
+
+func Code2Session(ctx *microapp.MicroApp, params url.Values) (RespCode2Session, error) {
 	params.Add("appid", ctx.Config.AppId)
 	params.Add("secret", ctx.Config.AppSecret)
-	return ctx.Client.HTTPGet(apiCode2Session + "?" + params.Encode())
+	xresp := RespCode2Session{}
+	resp, err := ctx.Client.HTTPGet(apiCode2Session + "?" + params.Encode())
+	if err != nil {
+		return xresp, err
+	}
+
+	err = json.Unmarshal(resp, &resp)
+	if err != nil {
+		return xresp, err
+	}
+
+	if xresp.Code != 0 {
+		err = fmt.Errorf("Code2Session error : errcode=%v , errmsg=%v", xresp.Code, xresp.Msg)
+		return xresp, err
+	}
+	return xresp, err
 }

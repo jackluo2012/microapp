@@ -40,6 +40,10 @@ HttpClient 用于向接口发送请求
 type Client struct {
 	Ctx *MicroApp
 }
+type Error struct {
+	Code int64  `json:"errcode"`
+	Msg  string `json:"errmsg"`
+}
 
 // HTTPGet GET 请求
 func (client *Client) HTTPGet(uri string) (resp []byte, err error) {
