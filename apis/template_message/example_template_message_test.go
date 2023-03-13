@@ -17,8 +17,8 @@ package template_message_test
 import (
 	"fmt"
 
-	"github.com/fastwego/microapp"
-	"github.com/fastwego/microapp/apis/template_message"
+	"github.com/jackluo2012/microapp"
+	"github.com/jackluo2012/microapp/apis/template_message"
 )
 
 func ExampleSend() {

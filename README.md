@@ -2,13 +2,13 @@
 
 A fast [microapp](https://microapp.bytedance.com/) development sdk written in Golang
 
-[![GoDoc](https://pkg.go.dev/badge/github.com/fastwego/microapp?status.svg)](https://pkg.go.dev/github.com/fastwego/microapp?tab=doc)
-[![Go Report Card](https://goreportcard.com/badge/github.com/fastwego/microapp)](https://goreportcard.com/report/github.com/fastwego/microapp)
+[![GoDoc](https://pkg.go.dev/badge/github.com/jackluo2012/microapp?status.svg)](https://pkg.go.dev/github.com/jackluo2012/microapp?tab=doc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jackluo2012/microapp)](https://goreportcard.com/report/github.com/jackluo2012/microapp)
 
 ## 快速开始 & demo
 
 ```shell script
-go get github.com/fastwego/microapp
+go get github.com/jackluo2012/microapp
 ```
 
 ```go
@@ -33,7 +33,7 @@ fmt.Println(string(resp), err)
 
 完整演示项目：
 
-[https://github.com/fastwego/microapp-demo](https://github.com/fastwego/microapp-demo)
+[https://github.com/jackluo2012/microapp-demo](https://github.com/jackluo2012/microapp-demo)
 
 接口列表：
 
@@ -46,7 +46,7 @@ fmt.Println(string(resp), err)
 「快」作为框架设计的核心理念，体现在方方面面：
 
 - 使用 Go 语言，开发快、编译快、部署快、运行快，轻松服务海量用户
-- 丰富的[文档](https://pkg.go.dev/github.com/fastwego/microapp) 和 [演示代码](https://github.com/fastwego/microapp-demo) ，快速上手，5 分钟即可搭建一套完整的字节小程序服务
+- 丰富的[文档](https://pkg.go.dev/github.com/jackluo2012/microapp) 和 [演示代码](https://github.com/jackluo2012/microapp-demo) ，快速上手，5 分钟即可搭建一套完整的字节小程序服务
 - 独立清晰的模块划分，快速熟悉整个框架，没有意外，一切都是你期望的样子
 - 甚至连框架自身的大部分代码也是自动生成的，维护更新快到超乎想象
 
@@ -71,7 +71,7 @@ fmt.Println(string(resp), err)
 
 单台服务器支撑不住访问流量/想提高服务可用性？
 
-只需 [设置 GetAccessTokenFunc 方法](https://pkg.go.dev/github.com/fastwego/microapp/?tab=doc#example-MicroApp.GetAccessTokenHandler) ，从中控服务获取 AccessToken，即可解决多实例刷新冲突/覆盖的问题
+只需 [设置 GetAccessTokenFunc 方法](https://pkg.go.dev/github.com/jackluo2012/microapp/?tab=doc#example-MicroApp.GetAccessTokenHandler) ，从中控服务获取 AccessToken，即可解决多实例刷新冲突/覆盖的问题
 
 ### 活跃的开发者社区
 

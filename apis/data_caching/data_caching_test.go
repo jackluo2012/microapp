@@ -21,8 +21,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/fastwego/microapp"
-	"github.com/fastwego/microapp/test"
+	"github.com/jackluo2012/microapp"
+	"github.com/jackluo2012/microapp/test"
 )
 
 func TestMain(m *testing.M) {

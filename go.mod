@@ -1,4 +1,4 @@
-module github.com/fastwego/microapp
+module github.com/jackluo2012/microapp
 
 go 1.15
 

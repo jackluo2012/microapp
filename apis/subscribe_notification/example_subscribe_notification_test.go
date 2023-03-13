@@ -17,8 +17,8 @@ package subscribe_notification_test
 import (
 	"fmt"
 
-	"github.com/fastwego/microapp"
-	"github.com/fastwego/microapp/apis/subscribe_notification"
+	"github.com/jackluo2012/microapp"
+	"github.com/jackluo2012/microapp/apis/subscribe_notification"
 )
 
 func ExampleNotify() {

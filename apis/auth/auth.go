@@ -18,7 +18,7 @@ package auth
 import (
 	"net/url"
 
-	"github.com/fastwego/microapp"
+	"github.com/jackluo2012/microapp"
 )
 
 const (

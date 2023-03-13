@@ -17,8 +17,8 @@ package content_security_test
 import (
 	"fmt"
 
-	"github.com/fastwego/microapp"
-	"github.com/fastwego/microapp/apis/content_security"
+	"github.com/jackluo2012/microapp"
+	"github.com/jackluo2012/microapp/apis/content_security"
 )
 
 func ExampleTextAntiDirty() {

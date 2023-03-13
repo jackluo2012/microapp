@@ -20,7 +20,7 @@ import (
 	"net/http/httptest"
 	"sync"
 
-	"github.com/fastwego/microapp"
+	"github.com/jackluo2012/microapp"
 )
 
 var MockMicroApp *microapp.MicroApp

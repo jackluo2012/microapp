@@ -18,7 +18,7 @@ package subscribe_notification
 import (
 	"bytes"
 
-	"github.com/fastwego/microapp"
+	"github.com/jackluo2012/microapp"
 )
 
 const (

@@ -17,8 +17,8 @@ package qrcode_test
 import (
 	"fmt"
 
-	"github.com/fastwego/microapp"
-	"github.com/fastwego/microapp/apis/qrcode"
+	"github.com/jackluo2012/microapp"
+	"github.com/jackluo2012/microapp/apis/qrcode"
 )
 
 func ExampleCreateQRCode() {

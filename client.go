@@ -28,8 +28,8 @@ import (
 )
 
 var (
-	ServerUrl              = "https://developer.toutiao.com" //  api 服务器地址
-	UserAgent              = "fastwego/microapp"
+	ServerUrl              = "https://open-sandbox.douyin.com" //"https://developer.toutiao.com" //  api 服务器地址
+	UserAgent              = "jackluo2012/microapp"
 	ErrorAccessTokenExpire = errors.New("access token expire")
 	ErrorSystemBusy        = errors.New("system busy")
 )
@@ -52,7 +52,7 @@ func (client *Client) HTTPGet(uri string) (resp []byte, err error) {
 	return client.HTTPDo(req)
 }
 
-//HTTPPost POST 请求
+// HTTPPost POST 请求
 func (client *Client) HTTPPost(uri string, payload io.Reader, contentType string) (resp []byte, err error) {
 
 	req, err := http.NewRequest(http.MethodPost, ServerUrl+uri, payload)
@@ -65,7 +65,7 @@ func (client *Client) HTTPPost(uri string, payload io.Reader, contentType string
 	return client.HTTPDo(req)
 }
 
-//HTTPDo 执行 请求
+// HTTPDo 执行 请求
 func (client *Client) HTTPDo(req *http.Request) (resp []byte, err error) {
 
 	var body, body2 []byte

@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/fastwego/microapp"
-	"github.com/fastwego/microapp/apis/data_caching"
+	"github.com/jackluo2012/microapp"
+	"github.com/jackluo2012/microapp/apis/data_caching"
 )
 
 func ExampleSetUserStorage() {
